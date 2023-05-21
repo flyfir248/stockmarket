@@ -35,4 +35,4 @@ def plot_stock_graph(company_name, plot_file):
     fig.write_html(plot_path)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=5000)
