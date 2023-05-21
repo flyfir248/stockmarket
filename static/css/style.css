@@ -1,0 +1,60 @@
+/* style.css */
+
+/* body styles */
+body {
+  background-color: #202225;
+  font-family: Arial, sans-serif;
+  color: #dcddde;
+}
+
+/* heading styles */
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* link styles */
+a {
+  color: #7289da;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* form styles */
+form {
+  margin-top: 20px;
+}
+
+label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+input[type="text"] {
+  border: 2px solid #7289da;
+  padding: 10px;
+  font-size: 16px;
+  color: #dcddde;
+  background-color: #36393f;
+}
+
+button[type="submit"] {
+  background-color: #7289da;
+  color: #dcddde;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #677bc4;
+}
