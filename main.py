@@ -5,17 +5,16 @@ import os
 
 app = Flask(__name__)
 
-
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
         company_name = request.form['company']
-        plot_stock_graph(company_name)
-        return render_template(f'{company_name}.html')
+        plot_file = f"{company_name.lower().replace(' ', '_')}.html"  # Generate unique file name
+        plot_stock_graph(company_name, plot_file)
+        return render_template(plot_file)
     return render_template('index.html')
 
-
-def plot_stock_graph(company_name):
+def plot_stock_graph(company_name, plot_file):
     # Set your API key
     api_key = 'PQ5M1AYGGKKUQOAV'
 
@@ -31,12 +30,9 @@ def plot_stock_graph(company_name):
                       xaxis_title='Time',
                       yaxis_title='Closing Price')
 
-    # Generate a unique filename based on the company name
-    filename = f'templates/{company_name}.html'
-
-    # Save the plot as HTML file with the unique filename
-    fig.write_html(filename)
-
+    # Save the plot as HTML file with the unique file name
+    plot_path = os.path.join('templates', plot_file)
+    fig.write_html(plot_path)
 
 if __name__ == '__main__':
     app.run()
