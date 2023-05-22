@@ -12,7 +12,6 @@ def index():
         plot_file = f"{company_name.lower().replace(' ', '_')}.html"  # Generate unique file name
         plot_stock_graph(company_name, plot_file)
         return render_template(plot_file)
-
     return render_template('index.html')
 
 def plot_stock_graph(company_name, plot_file):
