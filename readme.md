@@ -44,5 +44,21 @@ The application includes a script, cleanup_html_files.py, that runs automaticall
 ## Contributing
 Contributions are welcome! If you find any issues or have suggestions for improvement, please open an issue or submit a pull request.
 
+## Demo
+
+* The starting UI looks something like this:
+
+![img_2.png](img_2.png)
+
+* Searching Up for stock results for 'IBM'
+
+![img_1.png](img_1.png)
+
+* Search Up **IBM** hovering over the line graph you can see the price registered as well.
+
+![img.png](img.png)
+
+The plot over time is displayed.
+
 ## License
 This project is licensed under the MIT License.
